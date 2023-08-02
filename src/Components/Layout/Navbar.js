@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 import styles from "./Navbar.module.css"
 import logo from "./../../assets/logosite.png"
 
@@ -9,11 +11,13 @@ function Navbar(){
                     <h1>Front-End<br/>Developer</h1>
                 </div>
             </div>
-            <ul>
-                <li>Home</li>
-                <li>Sobre</li>
-                <li>Tecnologias</li>
-                <li>Projetos</li>
+            <ul className={styles.list}>
+                <li className={styles.item}>
+                    <Link to="/">Home</Link>
+                </li>
+                <li className={styles.item}><Link to="sobre">Sobre</Link></li>
+                <li className={styles.item}>Tecnologias</li>
+                <li className={styles.item}>Projetos</li>
             </ul>
         </nav>
     )
